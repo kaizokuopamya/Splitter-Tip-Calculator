@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <title>SPLITTER - Tip Calculator</title>
+  </head>
+  <body>
+    <main>
+      <div class="splitter-logo">
+        <img src="./images/logo.svg" alt="splitter logo" />
+      </div>
+      <div class="container">
+        <div class="tip-detail">
+          <div class="bill-amount">
+            <label for="bill">Bill</label>
+            <div class="bill-input">
+              <img class="rupee-icon" src="images/icon-rupee.svg" alt="rupee symbol">
+              <input id="bill" type="number" min="0" placeholder="0" />
+            </div>
+          </div>
+          <div class="tip-percent-section">
+            <label for="tip-percent">Select Tip %</label>
+            <div class="tip-grid">
+              <button class="per-button" value="5">5%</button>
+              <button class="per-button" value="10">10%</button>
+              <button class="per-button" value="15">15%</button>
+              <button class="per-button" value="25">25%</button>
+              <button class="per-button" value="50">50%</button>
+              <input id="tip-percent" type="number" placeholder="Custom" />
+            </div>
+          </div>
+          <div class="people-count">
+            <label for="people">Number of People</label> <small id="error"></small>
+            <div class="people-count-section">
+              <img class="people-icon" src="images/icon-person.svg" alt="person icon">
+              <input id="people" type="number" min="0" placeholder="0" />
+            </div>
+          </div>
+        </div>
+        <div class="tip-section">
+          <div class="tip-amount-section">
+            <div>
+              <h4>Tip Amount</h4>
+              <p><small>/ person</small></p>
+            </div>
+            <div class="tip-amount-display">
+              <h1 class="tip-amount"><small>₹</small>0.00</h1>
+            </div>
+          </div>
+          <div class="total-tip-section">
+            <div>
+              <h4>Total</h4>
+              <p><small>/ person</small></p>
+            </div>
+            <div class="tip-total-display">
+              <h1 class="total-tip-amount"><small>₹</small>0.00</h1>
+            </div>
+          </div>
+          <div class="reset-section">
+            <button class="reset">RESET</button>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io/home" target="_blank"
+            >Frontend Mentor.</a
+          > Made with &#129505; by
+          <a href="https://github.com/kaizokuopamya" target="_blank"
+            >kaizokuopamya</a
+          >
+        </div>
+      </footer>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
