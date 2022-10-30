@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+/* **************Space mono font family(Google Font)**************** */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 *,
 *::after,
 *::before {
@@ -6,8 +7,10 @@
   margin: 0;
 }
 
-:root{
+/* **************root class for colors and fonts**************** */
+:root {
   --bright-orange: hsl(31, 77%, 52%);
+  --dark-red: hsl(360, 92%, 50%);
   --strong-cyan: hsl(172, 67%, 45%);
   --very-dark-cyan: hsl(183, 100%, 15%);
   --dark-grayish-cyan: hsl(186, 14%, 43%);
@@ -16,90 +19,96 @@
   --very-light-grayish-cyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
   --font-size: 1.5rem;
-  --font-family: 'Space Mono', monospace;
+  --font-family: "Space Mono", monospace;
 }
 
+/* **************Remove spinner from input field**************** */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-body{
+/* **************mobile first approach of styling**************** */
+body {
   width: 100%;
   font-family: var(--font-family);
-  background:var(--light-grayish-cyan);
+  background: var(--light-grayish-cyan);
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.container{
+.container {
   width: 100%;
   background: var(--very-light-grayish-cyan);
   border-radius: 1.5rem;
   padding: 2rem;
 }
 
-.splitter-logo{
+.splitter-logo {
   margin: 3rem;
+  cursor: pointer;
 }
 
 /* **************Typography**************** */
 
-h1{
+h1 {
   color: var(--strong-cyan);
 }
 
-p{
+p {
   color: var(--grayish-cyan);
   font-weight: 700;
 }
 
-h4{
+h4 {
   color: var(--white);
 }
 
-#error{
-  color: red;
+#error {
+  color: var(--dark-red);
   float: right;
   font-weight: bold;
 }
 
-label{
+label {
   color: var(--dark-grayish-cyan);
   font-weight: bold;
   font-size: 1rem;
 }
-
-#bill, #people{
+/* **************Input Fields**************** */
+#bill,
+#people {
   width: 100%;
   height: 3rem;
   border: none;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   text-align: end;
   padding: 0 1rem;
   color: var(--very-dark-cyan);
   font-size: var(--font-size);
   font-family: var(--font-family);
   font-weight: bold;
-  background: #F3F3F3;
+  background: #f3f3f3;
   position: relative;
   margin-bottom: 1rem;
 }
 
-#bill:focus, #people:focus{
+#bill:focus,
+#people:focus {
   outline: none;
   border: 2px solid var(--strong-cyan);
   padding: 0 1rem;
   cursor: pointer;
 }
 
-.rupee-icon{
+/* **************Icons beside input fields**************** */
+.rupee-icon {
   width: 1.2rem;
   position: absolute;
   top: 14.2rem;
@@ -107,14 +116,22 @@ label{
   z-index: 2;
 }
 
-.people-icon{
+.people-icon {
   position: absolute;
   top: 34.7rem;
   left: 3rem;
   z-index: 2;
 }
 
-.per-button{
+/* **************Percentage button styles**************** */
+.tip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin: 1rem 0;
+}
+
+.btn {
   cursor: pointer;
   width: 100%;
   height: 3rem;
@@ -122,21 +139,27 @@ label{
   background: var(--very-dark-cyan);
   color: var(--white);
   border: none;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   font-size: var(--font-size);
   font-weight: 600;
 }
 
-.per-button:active{
+.btn:hover {
+  background: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.active {
   background: var(--strong-cyan);
   color: var(--very-dark-cyan);
 }
 
-#tip-percent{
+/* **************Custom tip styles**************** */
+#tip-percent {
   width: 100%;
   background: var(--very-light-grayish-cyan);
   border: none;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   text-align: center;
   color: var(--very-dark-cyan);
   font-size: var(--font-size);
@@ -144,141 +167,144 @@ label{
   font-family: var(--font-family);
 }
 
-#tip-percent:focus{
+#tip-percent:focus,
+#tip-percent:active {
   outline: none;
   border: 2px solid var(--strong-cyan);
   text-align: end;
   padding: 0 1rem;
 }
 
-.tip-section{
+/* **************tip-display section**************** */
+.tip-section {
   background: var(--very-dark-cyan);
   padding: 1.5rem;
   margin: 1rem 0;
   border-radius: 1rem;
 }
 
-.reset{
+/* **************reset button styles**************** */
+.reset {
   cursor: pointer;
   width: 100%;
   height: 3rem;
   background: var(--dark-grayish-cyan);
   margin: 1rem 0 0 0;
   border: none;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   font-size: 1.2rem;
   font-weight: bolder;
   font-family: var(--font-family);
   color: var(--very-dark-cyan);
 }
 
-.reset:hover{
-  background: var(--strong-cyan);
+.reset:hover {
+  background: var(--light-grayish-cyan);
 }
 
-.tip-amount-section, .total-tip-section{
+/* ********tip per person and total per person section**********/
+.tip-amount-section,
+.total-tip-section {
   display: flex;
   justify-content: space-between;
   margin: 1.2rem 0;
 }
 
-.tip-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
-  margin: 1rem 0;
+/* **************attribution style**************** */
+.attribution {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--bright-orange);
 }
 
-.attribution {
+.attribution a {
+  text-decoration: none;
+  color: hsl(228, 100%, 50%);
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* **************media queries for medium screen/tablet**************** */
+@media (min-width: 750px) and (max-width: 1020px) {
+  main {
     width: 80%;
     margin: 0 auto;
-    margin-top: 2rem;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tip-detail {
+    width: 48%;
+  }
+  .tip-section {
+    width: 48%;
+  }
+  .tip-amount-section,
+  .total-tip-section {
     margin-bottom: 1rem;
-    font-size: 1rem;
-    text-align: center;
-    font-weight: 700;
-    color: var(--bright-orange);
   }
-  
-  .attribution a {
-    text-decoration: none;
-    color: hsl(228, 100%, 50%);
+  .tip-grid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  
-  .attribution a:hover {
-    text-decoration: underline;
+  #tip-percent::placeholder {
+    font-size: 1.1rem;
   }
+  .rupee-icon {
+    top: 14rem;
+    left: 8rem;
+  }
+  .people-icon {
+    top: 30.5rem;
+    left: 8rem;
+  }
+  .reset {
+    margin-top: 4rem;
+  }
+}
 
-  @media (min-width:750px)and (max-width:1020px){
-    main{
-      width: 80%;
-      margin: 0 auto;
-    }
-    .container{
-      display: flex;
-      justify-content: space-between;
-    }
-    .tip-detail{
-      width: 48%;
-    }
-    .tip-section{
-      width: 48%;
-    }
-    .tip-amount-section, .total-tip-section{
-      margin-bottom: 1rem;
-    }
-    .tip-grid{
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    #tip-percent::placeholder{
-      font-size: 1.1rem;
-    }
-    .rupee-icon{
-      top: 14rem;
-      left: 8rem;
-    }
-    .people-icon{
-      top: 30.5rem;
-      left: 8rem;
-    }
-    .reset{
-      margin-top: 4rem;
-    }
+/* **************media queries for large screen/desktop**************** */
+@media (min-width: 1020px) {
+  .splitter-logo {
+    margin: 2rem 0;
   }
-
-  @media(min-width:1020px){
-    .splitter-logo{
-      margin: 2rem 0;
-    }
-    main{
-      width: 70%;
-      margin: 0 auto;
-    }
-    .container{
-      display: flex;
-      justify-content: space-between;
-    }
-    .tip-detail{
-      width: 48%;
-    }
-    .tip-section{
-      width: 48%;
-    }
-    .tip-amount-section, .total-tip-section{
-      margin-bottom: 2rem;
-    }
-    .tip-grid{
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    .rupee-icon{
-      top: 12.2rem;
-      left: 15rem;
-    }
-    .people-icon{
-      top: 28.5rem;
-      left: 15rem;
-    }
-    .reset{
-      margin-top: 3rem;
-    }
+  main {
+    width: 70%;
+    margin: 0 auto;
   }
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tip-detail {
+    width: 48%;
+  }
+  .tip-section {
+    width: 48%;
+  }
+  .tip-amount-section,
+  .total-tip-section {
+    margin-bottom: 2rem;
+  }
+  .tip-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .rupee-icon {
+    top: 12.2rem;
+    left: 15rem;
+  }
+  .people-icon {
+    top: 28.5rem;
+    left: 15rem;
+  }
+  .reset {
+    margin-top: 3rem;
+  }
+}
