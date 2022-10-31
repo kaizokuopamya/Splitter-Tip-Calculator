@@ -34,6 +34,10 @@ body {
   width: 100%;
   font-family: var(--font-family);
   background: var(--light-grayish-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 main {
@@ -66,7 +70,7 @@ p {
   font-weight: 700;
 }
 
-h4 {
+strong {
   color: var(--white);
 }
 
@@ -81,6 +85,7 @@ label {
   font-weight: bold;
   font-size: 1rem;
 }
+
 /* **************Input Fields**************** */
 #bill,
 #people {
@@ -199,7 +204,7 @@ label {
 }
 
 .reset:hover {
-  background: var(--light-grayish-cyan);
+  background: var(--strong-cyan);
 }
 
 /* ********tip per person and total per person section**********/

@@ -81,7 +81,7 @@ function calculate() {
 
 //function to handle form reset
 function handleReset() {
-  //changing value to 0 for variables and empty incase of input fields 
+  //changing value to 0 for variables and empty incase of input fields
   tipVal = 0;
   billVal = 0;
   bill.value = "";
