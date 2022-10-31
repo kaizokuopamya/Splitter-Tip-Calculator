@@ -73,9 +73,9 @@ function calculate() {
   if (peopleVal >= 1) {
     let tip = (billVal * tipVal) / peopleVal;
     let total = tip + billVal / peopleVal;
-    //changing innerHTML of tip-section
-    tipByPerson.innerHTML = "<small>₹</small>" + tip.toFixed(2);
-    totalByPerson.innerHTML = "<small>₹</small>" + total.toFixed(2);
+    //changing textContent of tip-section
+    tipByPerson.textContent = "₹" + tip.toFixed(2);
+    totalByPerson.textContent = "₹" + total.toFixed(2);
   }
 }
 
@@ -87,9 +87,9 @@ function handleReset() {
   bill.value = "";
   customTip.value = "";
   people.value = "";
-  //setting innerHTML as ₹0.00
-  tipByPerson.innerHTML = "<small>₹</small>" + "0.00";
-  totalByPerson.innerHTML = "<small>₹</small>" + "0.00";
+  //setting textContent as ₹0.00
+  tipByPerson.textContent = "₹0.00";
+  totalByPerson.textContent = "₹0.00";
   //removing active class of btn
   buttons.forEach((btn) => {
     btn.classList.remove("active");
