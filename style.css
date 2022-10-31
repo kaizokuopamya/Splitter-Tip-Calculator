@@ -104,28 +104,21 @@ label {
   margin-bottom: 1rem;
 }
 
+#bill{
+  background: url(images/icon-rupee.svg) no-repeat 3% 50%;
+  background-size: 1.3rem;
+}
+
+#people{
+  background: url(images/icon-person.svg) no-repeat 3% 50%;
+}
+
 #bill:focus,
 #people:focus {
   outline: none;
   border: 2px solid var(--strong-cyan);
   padding: 0 1rem;
   cursor: pointer;
-}
-
-/* **************Icons beside input fields**************** */
-.rupee-icon {
-  width: 1.2rem;
-  position: absolute;
-  top: 14.2rem;
-  left: 3rem;
-  z-index: 2;
-}
-
-.people-icon {
-  position: absolute;
-  top: 34.7rem;
-  left: 3rem;
-  z-index: 2;
 }
 
 /* **************Percentage button styles**************** */
@@ -237,7 +230,7 @@ label {
 }
 
 /* **************media queries for medium screen/tablet**************** */
-@media (min-width: 750px) and (max-width: 1020px) {
+@media (min-width: 628px) and (max-width: 1020px) {
   main {
     width: 80%;
     margin: 0 auto;
@@ -262,14 +255,6 @@ label {
   #tip-percent::placeholder {
     font-size: 1.1rem;
   }
-  .rupee-icon {
-    top: 14rem;
-    left: 8rem;
-  }
-  .people-icon {
-    top: 30.5rem;
-    left: 8rem;
-  }
   .reset {
     margin-top: 4rem;
   }
@@ -281,7 +266,7 @@ label {
     margin: 2rem 0;
   }
   main {
-    width: 70%;
+    width: 65%;
     margin: 0 auto;
   }
   .container {
@@ -300,14 +285,6 @@ label {
   }
   .tip-grid {
     grid-template-columns: 1fr 1fr 1fr;
-  }
-  .rupee-icon {
-    top: 12.2rem;
-    left: 15rem;
-  }
-  .people-icon {
-    top: 28.5rem;
-    left: 15rem;
   }
   .reset {
     margin-top: 3rem;
